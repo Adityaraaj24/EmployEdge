@@ -28,7 +28,11 @@ const corsOptions = {
     credentials: true,
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions,{
+    origin:[
+        process.env.VITE_FRONTEND_URL
+    ]
+}));
 
 const PORT = process.env.PORT || 3000;
 
