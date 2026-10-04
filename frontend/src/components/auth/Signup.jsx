@@ -55,7 +55,7 @@ const Signup = () => {
                 toast.success(res.data.message);
             }
         } catch (error) {
-            console.log(error);
+            console.log("register error",error);
             toast.error(error.response.data.message);
         } finally{
             dispatch(setLoading(false));
@@ -80,7 +80,7 @@ const Signup = () => {
                             value={input.fullname}
                             name="fullname"
                             onChange={changeEventHandler}
-                            placeholder="patel"
+                            placeholder="aditya"
                         />
                     </div>
                     <div className='my-2'>
@@ -90,7 +90,7 @@ const Signup = () => {
                             value={input.email}
                             name="email"
                             onChange={changeEventHandler}
-                            placeholder="patel@gmail.com"
+                            placeholder="aditya@gmail.com"
                         />
                     </div>
                     <div className='my-2'>
@@ -110,7 +110,7 @@ const Signup = () => {
                             value={input.password}
                             name="password"
                             onChange={changeEventHandler}
-                            placeholder="patel@gmail.com"
+                            placeholder="aditya@gmail.com"
                         />
                     </div>
                     <div className='flex items-center justify-between'>
